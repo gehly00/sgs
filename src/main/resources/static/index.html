@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGS - Solicitações</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <header class="cabecalho">
+      <div class="cabecalho-conteudo">
+        <div class="marca">
+          <div class="marca-icone">
+            ✓
+          </div>
+
+          <div>
+            <h1>SGS</h1>
+            <span>Sistema de Gestão de Solicitações</span>
+          </div>
+        </div>
+
+        <div class="cabecalho-acoes">
+          <a href="#" class="botao">
+            <span class="icone">＋</span>
+            Nova Solicitação
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="pagina-introducao">
+        <div>
+          <span class="etiqueta">GESTÃO</span>
+          <h2>Solicitações</h2>
+        </div>
+      </section>
+
+      <section class="card">
+        <form class="filtros">
+          <div class="campo">
+            <label for="status">Status</label>
+            <select id="status">
+              <option value="">Todos os status</option>
+              <option value="SOLICITADO">Solicitado</option>
+              <option value="LIBERADO">Liberado</option>
+              <option value="APROVADO">Aprovado</option>
+              <option value="REJEITADO">Rejeitado</option>
+              <option value="CANCELADO">Cancelado</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="categoria">Categoria</label>
+            <select id="categoria">
+              <option value="">Todas as categorias</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="dataInicio">Data inicial</label>
+            <input type="date" id="dataInicio">
+          </div>
+
+          <div class="campo">
+            <label for="dataFim">Data final</label>
+            <input type="date" id="dataFim">
+          </div>
+
+          <div class="acoes-filtros">
+            <button type="button" class="botao">
+              Filtrar
+            </button>
+
+            <button type="button" class="botao-secundario">
+              Limpar
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section class="card card-tabela">
+        <div class="tabela-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Solicitante</th>
+                <th>CPF/CNPJ</th>
+                <th>Categoria</th>
+                <th>Valor</th>
+                <th>Data</th>
+                <th>Status</th>
+                <th class="coluna-acoes">Ações</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Pedro da Silva</td>
+                <td>12345678901</td>
+                <td>Serviços</td>
+                <td>R$ 1.500,00</td>
+                <td>12/09/2026</td>
+                <td>Solicitado</td>
+                <td>
+                  <a href="#" class="botao-detalhes">
+                    Detalhes
+                  </a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Maria Oliveira</td>
+                <td>98765432100</td>
+                <td>Material</td>
+                <td>R$ 2.750,50</td>
+                <td>12/09/2026</td>
+                <td>Liberado</td>
+                <td>
+                  <a href="#" class="botao-detalhes">
+                    Detalhes
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <div class="rodape-conteudo">
+        <div>
+          <strong>SGS</strong>
+          <span>Sistema de Gestão de Solicitações</span>
+        </div>
+
+        <span class="rodape-versao">
+          Desafio Técnico
+        </span>
+      </div>
+    </footer>
+
+  </body>
+</html>
