@@ -7,6 +7,31 @@ body {
     color: #1f2937;
 }
 
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 36px 32px 50px;
+    flex: 1;
+}
+
+.card {
+    margin-bottom: 24px;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.etiqueta {
+    display: inline-block;
+    margin-bottom: 7px;
+    color: #2563eb;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
 .cabecalho {
     background-color: #ffffff;
     border-bottom: 1px solid #e5e7eb;
@@ -56,49 +81,14 @@ body {
     font-size: 13px;
 }
 
-.container {
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 36px 32px 50px;
-
-    flex: 1;
-}
-
 .pagina-introducao {
     margin-bottom: 24px;
-}
-
-.etiqueta {
-    display: inline-block;
-    margin-bottom: 7px;
-    color: #2563eb;
-    font-size: 11px;
-    font-weight: bold;
-    letter-spacing: 1px;
 }
 
 .pagina-introducao h2 {
     color: #111827;
     font-size: 28px;
     font-weight: 700;
-}
-
-.card {
-    margin-bottom: 24px;
-    background-color: #ffffff;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-}
-
-.filtros {
-    padding: 22px 24px;
-    display: grid;
-    grid-template-columns:
-        minmax(160px, 1fr) minmax(180px, 1fr) minmax(150px, 180px) minmax(150px, 180px) auto;
-    gap: 16px;
-    align-items: end;
 }
 
 .campo {
@@ -114,30 +104,31 @@ body {
 }
 
 .campo input,
-.campo select {
+.campo select,
+.campo textarea {
     width: 100%;
     padding: 11px 12px;
     background-color: #ffffff;
     border: 1px solid #d1d5db;
     border-radius: 7px;
     color: #1f2937;
+    font-family: inherit;
     font-size: 14px;
     outline: none;
     transition:
-        border-color 0.15s ease,
-        box-shadow 0.15s ease;
+            border-color 0.15s ease,
+            box-shadow 0.15s ease;
 }
 
 .campo input:focus,
-.campo select:focus {
+.campo select:focus,
+.campo textarea:focus {
     border-color: #2563eb;
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
 }
 
-.acoes-filtros {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+.campo textarea {
+    resize: vertical;
 }
 
 .botao,
@@ -154,9 +145,9 @@ body {
     text-decoration: none;
     cursor: pointer;
     transition:
-        background-color 0.15s ease,
-        border-color 0.15s ease,
-        transform 0.1s ease;
+            background-color 0.15s ease,
+            border-color 0.15s ease,
+            transform 0.1s ease;
 }
 
 .botao {
@@ -189,6 +180,25 @@ body {
 .icone {
     font-size: 17px;
     line-height: 1;
+}
+
+.filtros {
+    padding: 22px 24px;
+    display: grid;
+    grid-template-columns:
+        minmax(160px, 1fr)
+        minmax(180px, 1fr)
+        minmax(150px, 180px)
+        minmax(150px, 180px)
+        auto;
+    gap: 16px;
+    align-items: end;
+}
+
+.acoes-filtros {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .card-tabela {
@@ -242,12 +252,18 @@ tbody tr:last-child td {
 }
 
 .coluna-acoes {
-    width: 70px;
     text-align: center;
 }
 
 td:last-child {
     text-align: center;
+}
+
+.acoes-tabela {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
 .botao-detalhes {
@@ -265,8 +281,8 @@ td:last-child {
     text-decoration: none;
     cursor: pointer;
     transition:
-        background-color 0.15s ease,
-        border-color 0.15s ease;
+            background-color 0.15s ease,
+            border-color 0.15s ease;
 }
 
 .botao-detalhes::before {
@@ -277,6 +293,120 @@ td:last-child {
 .botao-detalhes:hover {
     background-color: #dbeafe;
     border-color: #bfdbfe;
+}
+
+.select-status {
+    height: 34px;
+    padding: 0 8px;
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    color: #374151;
+    font-size: 12px;
+    outline: none;
+}
+
+.select-status:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+.botao-atualizar-status {
+    height: 34px;
+    padding: 0 12px;
+    background-color: #2563eb;
+    color: #ffffff;
+    border: 1px solid #2563eb;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.botao-atualizar-status:hover {
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+.card-formulario {
+    max-width: 900px;
+}
+
+.formulario {
+    padding: 26px 24px;
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.campo-completo {
+    grid-column: 1 / -1;
+}
+
+.formulario-acoes {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-top: 6px;
+}
+
+.card-detalhes {
+    max-width: 900px;
+}
+
+.detalhes-grid {
+    padding: 26px 24px;
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+    gap: 24px 32px;
+}
+
+.detalhe-item {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.detalhe-label {
+    color: #6b7280;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.detalhe-item strong {
+    color: #1f2937;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.detalhe-item p {
+    color: #374151;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.detalhe-completo {
+    grid-column: 1 / -1;
+    padding-top: 4px;
+}
+
+.status {
+    width: fit-content;
+    padding: 5px 9px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.status-solicitado {
+    background-color: #eff6ff;
+    color: #2563eb;
 }
 
 .rodape {
@@ -295,7 +425,7 @@ td:last-child {
     gap: 20px;
 }
 
-.rodape-conteudo>div {
+.rodape-conteudo > div {
     display: flex;
     align-items: center;
     gap: 7px;
