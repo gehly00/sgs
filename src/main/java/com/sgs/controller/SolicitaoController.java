@@ -15,7 +15,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @RestController
-@RequestMapping("/solicitacoes")
+@RequestMapping("/api/solicitacoes")
 public class SolicitaoController {
 
     private final SolicitacaoService service;
