@@ -30,8 +30,8 @@ public class SolicitaoController {
     }
 
     @GetMapping
-    public ResponseEntity<List<SolicitacaoListagemDTO>> listar(StatusSolicitacao status, LocalDate dataInico, LocalDate dataFim, Long categoriaId) {
-        return ResponseEntity.ok(service.listar(status, dataInico, dataFim, categoriaId));
+    public ResponseEntity<List<SolicitacaoListagemDTO>> listar(StatusSolicitacao status, LocalDate dataInicio, LocalDate dataFim, Long categoriaId) {
+        return ResponseEntity.ok(service.listar(status, dataInicio, dataFim, categoriaId));
     }
 
     @PostMapping
@@ -43,4 +43,5 @@ public class SolicitaoController {
     public ResponseEntity<SolicitacaoDetalheDTO> atualizarStatus(@PathVariable Long id, @Valid @RequestBody AtualizacaoStatusRequestDTO dto) {
         return ResponseEntity.ok(service.atualizarStatus(id,dto));
     }
+
 }

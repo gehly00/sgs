@@ -68,12 +68,7 @@ public class SolicitacaoService {
         StatusSolicitacao novoStatus = dto.getStatus();
 
         if (!transicaoPermitida(statusAtual, novoStatus)) {
-            throw new RegraDeNegocioException(
-                    "Transicao de status invalida: "
-                            + statusAtual
-                            + " para "
-                            + novoStatus
-            );
+            throw new RegraDeNegocioException("Transicao de status invalida: " + statusAtual + " para " + novoStatus);
         }
 
         solicitacao.setStatus(novoStatus);
@@ -116,4 +111,5 @@ public class SolicitacaoService {
                 solicitacao.getStatus()
         );
     }
+
 }

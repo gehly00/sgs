@@ -23,7 +23,7 @@ public class SolicitacaoRequestDTO {
     @DecimalMin(value = "0.01")
     private BigDecimal valor;
 
-    public SolicitacaoRequestDTO(){
+    public SolicitacaoRequestDTO() {
     }
 
     public Long getSolicitanteId() {

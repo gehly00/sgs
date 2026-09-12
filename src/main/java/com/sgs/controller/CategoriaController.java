@@ -23,4 +23,5 @@ public class CategoriaController {
     public ResponseEntity<List<CategoriaDTO>> listar() {
         return ResponseEntity.ok(service.listar());
     }
+
 }

@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/solicitante")
+@RequestMapping("/solicitantes")
 public class SolicitanteController {
 
     private final SolicitanteService service;
 
-    public SolicitanteController(SolicitanteService service){
+    public SolicitanteController(SolicitanteService service) {
         this.service = service;
     }
 
@@ -23,4 +23,5 @@ public class SolicitanteController {
     public ResponseEntity<List<SolicitanteDTO>> listar() {
         return ResponseEntity.ok(service.listar());
     }
+
 }

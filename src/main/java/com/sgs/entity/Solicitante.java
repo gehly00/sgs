@@ -16,7 +16,7 @@ public class Solicitante {
     @Column(name = "cpf_cnpj", nullable = false, unique = true, length = 14)
     private String cpfCnpj;
 
-    public Solicitante(){
+    public Solicitante() {
     }
 
     public Long getId() {

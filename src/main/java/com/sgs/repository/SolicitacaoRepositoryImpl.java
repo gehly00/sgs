@@ -11,13 +11,13 @@ import java.sql.Date;
 import java.time.LocalDate;
 import java.util.List;
 
-public class SolicitacaoRepositoryImpl implements SolicitacaoRepositoryCustom{
+public class SolicitacaoRepositoryImpl implements SolicitacaoRepositoryCustom {
 
     @PersistenceContext
     private EntityManager entity;
 
     @Override
-    public List<SolicitacaoListagemDTO> listarComFiltros(StatusSolicitacao status, LocalDate dataInicio, LocalDate dataFim, Long categoriaId){
+    public List<SolicitacaoListagemDTO> listarComFiltros(StatusSolicitacao status, LocalDate dataInicio, LocalDate dataFim, Long categoriaId) {
         StringBuilder sql = new StringBuilder(
                 """
                 SELECT

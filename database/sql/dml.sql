@@ -2,7 +2,7 @@
 
 INSERT INTO solicitante (nome, cpf_cnpj)
 VALUES
-    ('João da Silva', '12345678901'),
+    ('Pedro da Silva', '12345678901'),
     ('Maria Oliveira', '98765432100'),
     ('Carlos Santos', '45678912300'),
     ('Empresa Alfa Ltda', '12345678000199'),
@@ -11,7 +11,7 @@ VALUES
 
 INSERT INTO categoria (nome)
 VALUES
-    ('Serviços'),
+    ('Servicos'),
     ('Material'),
     ('Transporte'),
     ('Alimentacao'),
