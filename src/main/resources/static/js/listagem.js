@@ -105,16 +105,17 @@ function preencherTabela(solicitacoes) {
 
             <td>
                 <div class="acoes-tabela">
-
-                    <a
-                        href="detalhes.html?id=${solicitacao.id}"
-                        class="botao-detalhes"
-                    >
-                        Detalhes
-                    </a>
-
-                    ${criarAtualizacaoStatus(solicitacao)}
-
+                    <div class="acao-status">
+                        ${criarAtualizacaoStatus(solicitacao)}
+                    </div>
+                    <div class="acao-detalhes">
+                        <a
+                            href="detalhes.html?id=${solicitacao.id}"
+                            class="botao-detalhes"
+                        >
+                            Detalhes
+                        </a>
+                    </div>
                 </div>
             </td>
         `;

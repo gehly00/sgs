@@ -252,17 +252,29 @@ tbody tr:last-child td {
 }
 
 .coluna-acoes {
-    text-align: center;
+    text-align: left;
 }
 
 td:last-child {
-    text-align: center;
+    text-align: left;
 }
 
 .acoes-tabela {
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 8px;
+    min-width: 260px;
+}
+
+.acao-detalhes {
+    width: 34px;
+    flex-shrink: 0;
+    margin-left: auto;
+}
+
+.acao-status {
+    display: flex;
+    align-items: center;
     gap: 8px;
 }
 
@@ -443,4 +455,102 @@ td:last-child {
 
 .rodape-versao {
     font-size: 11px;
+}
+
+
+@media (max-width: 900px) {
+
+    .container {
+        padding: 28px 20px 40px;
+    }
+
+    .cabecalho-conteudo {
+        padding: 18px 20px;
+    }
+
+    .filtros {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .acoes-filtros {
+        grid-column: 1 / -1;
+    }
+
+    .formulario,
+    .detalhes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-completo,
+    .formulario-acoes,
+    .detalhe-completo {
+        grid-column: auto;
+    }
+
+    .formulario-acoes {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 24px 14px 32px;
+    }
+
+    .cabecalho-conteudo {
+        padding: 16px 14px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cabecalho-acoes {
+        width: 100%;
+    }
+
+    .cabecalho-acoes .botao,
+    .cabecalho-acoes .botao-secundario {
+        width: 100%;
+    }
+
+    .pagina-introducao h2 {
+        font-size: 24px;
+    }
+
+    .filtros {
+        grid-template-columns: 1fr;
+        padding: 18px;
+    }
+
+    .acoes-filtros {
+        grid-column: auto;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .acoes-filtros .botao,
+    .acoes-filtros .botao-secundario {
+        width: 100%;
+    }
+
+    .formulario,
+    .detalhes-grid {
+        padding: 20px 18px;
+    }
+
+    .formulario-acoes {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .formulario-acoes .botao,
+    .formulario-acoes .botao-secundario {
+        width: 100%;
+    }
+
+    .rodape-conteudo {
+        padding: 16px 14px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
