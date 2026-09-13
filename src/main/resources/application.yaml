@@ -5,6 +5,6 @@ spring:
   application:
     name: sgs
   datasource:
-    username: postgres
-    password: root
-    url: jdbc:postgresql://localhost:5432/sgs
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
