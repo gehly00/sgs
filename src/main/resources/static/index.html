@@ -10,7 +10,6 @@
   </head>
 
   <body>
-
     <header class="cabecalho">
       <div class="cabecalho-conteudo">
         <div class="marca">
@@ -19,20 +18,26 @@
             <h1>SGS</h1> <span>Sistema de Gestão de Solicitações</span>
           </div>
         </div>
-        <div class="cabecalho-acoes"> <a href="cadastro.html" class="botao"> <span class="icone">＋</span> Nova Solicitação
-          </a> </div>
+        <div class="cabecalho-acoes">
+          <a href="cadastro.html" class="botao">
+            <span class="icone">＋</span> Nova Solicitação
+          </a>
+        </div>
       </div>
     </header>
 
     <main class="container">
       <section class="pagina-introducao">
-        <div> <span class="etiqueta"> GESTÃO </span>
+        <div>
+          <span class="etiqueta"> GESTÃO </span>
           <h2>Solicitações</h2>
         </div>
       </section>
       <section class="card">
         <form class="filtros">
-          <div class="campo"> <label for="status"> Status </label> <select id="status">
+          <div class="campo">
+            <label for="status"> Status </label>
+            <select id="status">
               <option value=""> Todos os status </option>
               <option value="SOLICITADO"> Solicitado </option>
               <option value="LIBERADO"> Liberado </option>
@@ -40,13 +45,24 @@
               <option value="REJEITADO"> Rejeitado </option>
               <option value="CANCELADO"> Cancelado </option>
             </select> </div>
-          <div class="campo"> <label for="categoria"> Categoria </label> <select id="categoria">
+          <div class="campo">
+            <label for="categoria"> Categoria</label>
+            <select id="categoria">
               <option value=""> Todas as categorias </option>
-            </select> </div>
-          <div class="campo"> <label for="dataInicio"> Data inicial </label> <input type="date" id="dataInicio"> </div>
-          <div class="campo"> <label for="dataFim"> Data final </label> <input type="date" id="dataFim"> </div>
-          <div class="acoes-filtros"> <button type="button" class="botao"> Filtrar </button> <button type="button"
-              class="botao-secundario"> Limpar </button> </div>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="dataInicio"> Data inicial </label>
+            <input type="date" id="dataInicio">
+          </div>
+          <div class="campo">
+            <label for="dataFim"> Data final </label>
+            <input type="date" id="dataFim">
+          </div>
+          <div class="acoes-filtros">
+            <button type="button" class="botao">Filtrar</button>
+            <button type="button" class="botao-secundario"> Limpar </button>
+          </div>
         </form>
       </section>
       <section class="card card-tabela">
@@ -63,40 +79,7 @@
                 <th class="coluna-acoes">Ações</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>Pedro da Silva</td>
-                <td>12345678901</td>
-                <td>Serviços</td>
-                <td>R$ 1.500,00</td>
-                <td>12/09/2026</td>
-                <td>Solicitado</td>
-                <td>
-                  <div class="acoes-tabela"> <a href="detalhes.html" class="botao-detalhes"> Detalhes </a> <select
-                      class="select-status">
-                      <option value=""> Alterar status </option>
-                      <option value="LIBERADO"> Liberado </option>
-                      <option value="REJEITADO"> Rejeitado </option>
-                    </select> <button type="button" class="botao-atualizar-status"> Atualizar </button> </div>
-                </td>
-              </tr>
-              <tr>
-                <td>Maria Oliveira</td>
-                <td>98765432100</td>
-                <td>Material</td>
-                <td>R$ 2.750,50</td>
-                <td>12/09/2026</td>
-                <td>Liberado</td>
-                <td>
-                  <div class="acoes-tabela"> <a href="detalhes.html" class="botao-detalhes"> Detalhes </a> <select
-                      class="select-status">
-                      <option value=""> Alterar status </option>
-                      <option value="APROVADO"> Aprovado </option>
-                      <option value="REJEITADO"> Rejeitado </option>
-                    </select> <button type="button" class="botao-atualizar-status"> Atualizar </button> </div>
-                </td>
-              </tr>
-            </tbody>
+            <tbody id="tabela-solicitacoes"></tbody>
           </table>
         </div>
       </section>
@@ -108,6 +91,8 @@
           Desafio Técnico </span>
       </div>
     </footer>
+
+    <script src="js/listagem.js"></script>
 
   </body>
 

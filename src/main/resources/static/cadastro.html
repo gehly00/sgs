@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,10 +15,13 @@
                 <div class="marca">
                     <div class="marca-icone"> ✓ </div>
                     <div>
-                        <h1>SGS</h1> <span>Sistema de Gestão de Solicitações</span>
+                        <h1>SGS</h1>
+                        <span>Sistema de Gestão de Solicitações</span>
                     </div>
                 </div>
-                <div class="cabecalho-acoes"> <a href="index.html" class="botao-secundario"> Voltar </a> </div>
+                <div class="cabecalho-acoes">
+                    <a href="index.html" class="botao-secundario"> Voltar </a>
+                </div>
             </div>
         </header>
 
@@ -28,27 +32,32 @@
                 </div>
             </section>
             <section class="card card-formulario">
-                <form class="formulario">
-                    <div class="campo"> <label for="solicitante"> Solicitante </label> <select id="solicitante" required>
+                <form id="form-solicitacao" class="formulario">
+                    <div class="campo">
+                        <label for="solicitante"> Solicitante </label>
+                        <select id="solicitante" required>
                             <option value="">Selecione um solicitante</option>
-                            <option value="1"> Pedro da Silva - 12345678901 </option>
-                            <option value="2"> Maria Oliveira - 98765432100 </option>
-                        </select> </div>
-                    <div class="campo"> <label for="categoria"> Categoria </label> <select id="categoria" required>
-                            <option value="">Selecione uma categoria</option>
-                            <option value="1">Serviços</option>
-                            <option value="2">Material</option>
-                            <option value="3">Transporte</option>
-                            <option value="4">Alimentacao</option>
-                            <option value="5">Equipamentos</option>
-                        </select> </div>
-                    <div class="campo campo-completo"> <label for="descricao"> Descrição </label> <textarea id="descricao"
-                            rows="5" maxlength="500" placeholder="Informe a descrição da solicitação" required></textarea>
+                        </select>
                     </div>
-                    <div class="campo"> <label for="valor"> Valor </label> <input type="number" id="valor" min="0.01"
-                            step="0.01" placeholder="0,00" required> </div>
-                    <div class="formulario-acoes"> <a href="index.html" class="botao-secundario"> Cancelar </a> <button
-                            type="button" class="botao"> Salvar Solicitação </button> </div>
+                    <div class="campo">
+                        <label for="categoria"> Categoria </label>
+                        <select id="categoria" required>
+                            <option value="">Selecione uma categoria</option>
+                        </select>
+                    </div>
+                    <div class="campo campo-completo">
+                        <label for="descricao"> Descrição </label>
+                        <textarea id="descricao" rows="5" maxlength="500" placeholder="Informe a descrição da solicitação" required></textarea>
+                    </div>
+                    <div class="campo">
+                        <label for="valor"> Valor </label>
+                        <input type="number" id="valor" min="0.01" step="0.01" placeholder="0,00" required> </div>
+                    <div class="formulario-acoes">
+                        <a href="index.html" class="botao-secundario"> Cancelar </a>
+                        <button
+                                type="submit" class="botao"> Salvar Solicitação
+                        </button>
+                    </div>
                 </form>
             </section>
         </main>
@@ -59,6 +68,8 @@
                     class="rodape-versao"> Desafio Técnico </span>
             </div>
         </footer>
+
+        <script src="js/cadastro.js"></script>
 
     </body>
 </html>
