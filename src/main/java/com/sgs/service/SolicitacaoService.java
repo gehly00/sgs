@@ -31,8 +31,8 @@ public class SolicitacaoService {
         this.solicitanteRepository = solicitanteRepository;
     }
 
-    public List<SolicitacaoListagemDTO> listar(StatusSolicitacao status, LocalDate dataInicio, LocalDate dataFim, Long cateoriaId) {
-        return solicitacaoRepository.listarComFiltros(status, dataInicio,dataFim,cateoriaId);
+    public List<SolicitacaoListagemDTO> listar(StatusSolicitacao status, LocalDate dataInicio, LocalDate dataFim, Long categoriaId) {
+        return solicitacaoRepository.listarComFiltros(status, dataInicio,dataFim,categoriaId);
     }
 
     public SolicitacaoDetalheDTO buscarPorId(Long id) {

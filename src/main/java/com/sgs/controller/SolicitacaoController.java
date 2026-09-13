@@ -16,11 +16,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/solicitacoes")
-public class SolicitaoController {
+public class SolicitacaoController {
 
     private final SolicitacaoService service;
 
-    public SolicitaoController(SolicitacaoService service) {
+    public SolicitacaoController(SolicitacaoService service) {
         this.service = service;
     }
 

@@ -2,8 +2,8 @@ package com.sgs.exception;
 
 public class RegraDeNegocioException extends RuntimeException{
 
-    public RegraDeNegocioException(String meensagem) {
-        super(meensagem);
+    public RegraDeNegocioException(String mensagem) {
+        super(mensagem);
     }
 
 }

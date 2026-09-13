@@ -22,7 +22,7 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(RegraDeNegocioException.class)
-    public ResponseEntity<Map<String, String>> tratarRegraDeNegorio(RegraDeNegocioException ex) {
+    public ResponseEntity<Map<String, String>> tratarRegraDeNegocio(RegraDeNegocioException ex) {
         Map<String, String> erro = new HashMap<>();
         erro.put("erro", ex.getMessage());
 

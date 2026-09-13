@@ -133,8 +133,6 @@ Em seguida, conecte-se ao banco `sgs` e execute os scripts na seguinte ordem:
 2. database/sql/dml.sql
 ```
 
-O `ddl.sql` deve ser executado antes do `dml.sql`.
-
 ### 3. Configure a conexão
 
 A conexão com o banco de dados é configurada por meio de variáveis de ambiente.
@@ -166,6 +164,9 @@ jdbc:postgresql://localhost:5432/sgs
 ### 4. Execute a aplicação
 
 Execute a aplicação utilizando o Maven.
+```text
+mvn spring-boot:run
+```
 
 ### 5. Acesse a aplicação
 

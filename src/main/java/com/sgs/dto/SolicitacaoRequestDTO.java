@@ -1,9 +1,6 @@
 package com.sgs.dto;
 
-import jakarta.validation.constraints.DecimalMin;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.*;
 
 import java.math.BigDecimal;
 
@@ -21,6 +18,7 @@ public class SolicitacaoRequestDTO {
 
     @NotNull
     @DecimalMin(value = "0.01")
+    @Digits(integer = 13, fraction = 2)
     private BigDecimal valor;
 
     public SolicitacaoRequestDTO() {
